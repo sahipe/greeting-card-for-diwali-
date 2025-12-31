@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import greetingImage from "./assets/civilian.jpg"; // Your greeting background image
+import greetingImage from "./assets/civilian.jpg";
 import { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -37,17 +37,18 @@ function App() {
   return (
     <div
       className="min-h-screen flex flex-col items-center p-6"
-      style={{ backgroundColor: "#f3f4f6" }} // gray-100 → HEX
+      style={{ backgroundColor: "#f3f4f6" }}
     >
-      <div className="w-full max-w-md space-y-4">
+      <div className="w-full max-w-md  space-y-4">
         <div>
           <label
             htmlFor="name"
             className="block font-bold mb-1"
-            style={{ color: "#000000" }} // black text
+            style={{ color: "#000000" }}
           >
             Name
           </label>
+
           <input
             id="name"
             type="text"
@@ -56,13 +57,13 @@ function App() {
             onChange={(e) => setName(e.target.value)}
             className="w-full p-3 border-2 rounded focus:outline-none"
             style={{
-              borderColor: "#d1d5db", // gray-300 → HEX
+              borderColor: "#d1d5db",
               borderRadius: "8px",
               color: "#000000",
               backgroundColor: "#ffffff",
               transition: "border-color 0.3s ease",
             }}
-            onFocus={(e) => (e.target.style.borderColor = "#3b82f6")} // blue-500
+            onFocus={(e) => (e.target.style.borderColor = "#3b82f6")}
             onBlur={(e) => (e.target.style.borderColor = "#d1d5db")}
           />
         </div>
@@ -75,6 +76,7 @@ function App() {
           >
             Designation
           </label>
+
           <textarea
             id="designation"
             rows="1"
@@ -97,11 +99,8 @@ function App() {
           <button
             onClick={handleGenerateCard}
             className="py-3 px-6 rounded transition"
-            style={{
-              backgroundColor: "#2563eb", // blue-600
-              color: "#ffffff",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1d4ed8")} // blue-700
+            style={{ backgroundColor: "#2563eb", color: "#ffffff" }}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#1d4ed8")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#2563eb")}
           >
             Generate Card
@@ -111,11 +110,8 @@ function App() {
             <button
               onClick={handleDownloadPDF}
               className="py-3 px-6 rounded transition"
-              style={{
-                backgroundColor: "#16a34a", // green-600
-                color: "#ffffff",
-              }}
-              onMouseEnter={(e) => (e.target.style.backgroundColor = "#15803d")} // green-700
+              style={{ backgroundColor: "#16a34a", color: "#ffffff" }}
+              onMouseEnter={(e) => (e.target.style.backgroundColor = "#15803d")}
               onMouseLeave={(e) => (e.target.style.backgroundColor = "#16a34a")}
             >
               Download PDF
@@ -130,7 +126,7 @@ function App() {
           className="w-full max-w-[700px] relative rounded-lg overflow-hidden shadow-lg mt-10"
           style={{
             backgroundColor: "#ffffff",
-            border: "1px solid #e5e7eb", // gray-200 border for print clarity
+            border: "1px solid #e5e7eb",
           }}
         >
           <img
@@ -138,24 +134,28 @@ function App() {
             alt="Greeting Card Background"
             className="w-full h-full object-cover"
           />
+
           <div
             className="absolute -space-y-1 top-1/2 left-1/2 w-[90%] text-center text-black transform -translate-x-1/2 -translate-y-1/2 z-10"
             style={{ color: "#000000" }}
           >
+            {/* changed mt-5 -> mt-3 */}
             <h2
-              className="font-bold text-start sm:mt-7 mt-5"
+              className="font-bold text-start sm:mt-9 mt-8"
               style={{
                 fontSize: "clamp(18px, 2.5vw, 36px)",
-                color: "#1d4595", // blue shade
+                color: "#1d4595",
                 textShadow: "1px 1px 2px #ffffff",
               }}
             >
               {name}
             </h2>
+
+            {/* sits properly below name */}
             <p
-              className="text-start sm:mb-16 mb-8 sm:text-xl text-sm -mt-1.5 sm:mt-0"
+              className="text-start sm:mb-16 mb-8 sm:text-xl text-sm sm:mt-1 "
               style={{
-                color: "#1f2937", // gray-800
+                color: "#1f2937",
                 fontWeight: "600",
                 textShadow: "1px 1px 2px #ffffff",
               }}
