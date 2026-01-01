@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import greetingImage from "./assets/newyear.jpg";
+import greetingImage from "./assets/22.jpeg";
 import { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -141,7 +141,7 @@ function App() {
           >
             {/* changed mt-5 -> mt-3 */}
             <h2
-              className="font-bold text-start sm:mt-9 mt-8"
+              className="font-bold text-start sm:mt-9 mt-4"
               style={{
                 fontSize: "clamp(18px, 2.5vw, 36px)",
                 color: "#1d4595",

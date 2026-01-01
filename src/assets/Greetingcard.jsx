@@ -1,5 +1,5 @@
 import React from "react";
-import greetingImg from "../assets/Greeting.jpg";
+import greetingImg from "../assets/22.jpg";
 
 const GreetingCard = ({ name, designation }) => {
   return (
@@ -10,7 +10,9 @@ const GreetingCard = ({ name, designation }) => {
         className="w-full h-full object-cover"
       />
       <div className="absolute top-1/2 left-1/2 w-[90%] text-black text-center transform -translate-x-1/2 -translate-y-1/2 z-10">
-        <h2 className="text-[clamp(18px,2.5vw,36px)] font-bold text-shadow">{name}</h2>
+        <h2 className="text-[clamp(18px,2.5vw,36px)] font-bold text-shadow">
+          {name}
+        </h2>
         <p className="text-[clamp(16px,2vw,24px)] text-shadow">{designation}</p>
       </div>
     </div>
