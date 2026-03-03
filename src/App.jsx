@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import greetingImage from "./assets/22.jpeg";
+import greetingImage from "./assets/holi.jpeg";
 import { useRef } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
@@ -141,9 +141,9 @@ function App() {
           >
             {/* changed mt-5 -> mt-3 */}
             <h2
-              className="font-bold text-start sm:mt-9 mt-4"
+              className="font-bold text-start sm:mt-9 mt-12"
               style={{
-                fontSize: "clamp(18px, 2.5vw, 36px)",
+                fontSize: "17px",
                 color: "#1d4595",
                 textShadow: "1px 1px 2px #ffffff",
               }}
@@ -153,7 +153,7 @@ function App() {
 
             {/* sits properly below name */}
             <p
-              className="text-start sm:mb-16 mb-8 sm:text-xl text-sm sm:mt-1 "
+              className="text-start sm:mb-16 mb-8 sm:text-xl text-[15px] sm:mt-1 "
               style={{
                 color: "#1f2937",
                 fontWeight: "600",
